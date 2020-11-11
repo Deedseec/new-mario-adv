@@ -1,0 +1,124 @@
+html {
+  scrollbar-width: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#mario {
+  position: absolute;
+  height: 28px;
+  width: 26px;
+  /* top: 330px; */
+  /* left: 200px; */
+  overflow: hidden;
+  transform: translateX(10px) translateY(330px);
+}
+
+#mario_sprite {
+  animation: moverSpritesheet 0.24s steps(3) infinite;
+  /* width: 90px; */
+  height: 30px;
+  /* border:solid red; */
+}
+
+/********** GAME MENU ***********/
+
+#game_menu {
+  position: absolute;
+  z-index: 990;
+  background-color: black;
+  width: 812px;
+  height: 602px;
+  top: 9px;
+  left: 9px;
+}
+
+#start_btn, #restart_btn {
+  margin: auto;
+  width: 30%;
+  margin-top: 25px;
+  font-size: 26px;
+  z-index: 999;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+#start_btn {
+  margin-top: 225px;
+}
+
+p {
+  margin-top: 225px;
+  font-size: 26px;
+  color: black;
+  text-align: center;
+}
+
+
+/********** GAME SCREEN ***********/
+#gameScreen {
+  position: relative;
+  border: 1px solid black;
+  width: 810px;
+  height: 600px;
+  margin-left: 1px;
+  overflow: auto;
+  scrollbar-width: none;
+  font-size: 20px;
+}
+
+#lives, #scoreboard {
+  position: fixed;
+}
+
+#lives {
+  margin-left: 20px;
+}
+
+#scoreboard {
+  margin-left: 660px;
+}
+
+/* 
+#GAMEUI {
+  margin-top: 50px;
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  font-size: 60px;
+}  */
+
+#gameScreenHidden {
+  overflow: hidden;
+}
+
+
+/* .enemy {
+  animation-duration: 10s;
+  animation-name: moveEnemies;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes moveEnemies {
+  from {
+    transform: translateX(100px);
+  }
+
+  to {
+    transform: translateX(-100px);
+  }
+} */
+
+
+@keyframes moverSpritesheet {
+  from {
+      transform: translate3d(0px, 0, 0);
+  }
+  to {
+      transform: translate3d(-100%, 0, 0);
+  }
+}
